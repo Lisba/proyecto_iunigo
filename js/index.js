@@ -17,23 +17,26 @@
         // }
         
         // let userNew = new user (name, lastName, pts)
+
 function enableGift (){
+    
+    let button = document.querySelectorAll('.btn-outline-primary')
+    console.log(button)
 
-    let button = document.getElementById('btn-iunigo')
-    button.setAttribute('disabled', 'true')
-
-    if(currentUser['pts'] < currentGift['pts']){
-        button.disabled = true
-        button.setAttribute('style', 'background-color: red;')
-    } else {
-        button.disabled = false
-    }
+    button.forEach(element => {
+        element.forEach(() => {
+            if(currentUser['pts'] < currentGift[i]['pts']){
+                button.disabled= true
+            }
+        })
+    })
+    
 }
 
 let user1 = {
-name: 'Name1',
-lastName: 'LastName1',
-pts: 100
+    name: 'Name1',
+    lastName: 'LastName1',
+    pts: 100
 }
 
 let user2 = {
@@ -61,7 +64,7 @@ let gift3 = {
 }
 
 let currentUser = user1
-let currentGift = gift1
+let currentGift = [gift1, gift2, gift3]
 
 console.log(currentGift)
 console.log(currentUser)
@@ -84,31 +87,31 @@ function showGift(gift){
 
 function showGift1(gift){
 
-    let giftIunigo1 = document.createElement('button')
-    giftIunigo1.setAttribute('class', "btn btn-link collapsed")
-    giftIunigo1.setAttribute('type', "button")
-    giftIunigo1.setAttribute('id', 'btn-rmt')
-    giftIunigo1.setAttribute('data-target',"#collapseTwo")
-    giftIunigo1.setAttribute('aria-controls', "collapseTwo")
-    giftIunigo1.setAttribute('aria-expanded', "false")
-    giftIunigo1.setAttribute('data-toggle', 'collapse')
-    giftIunigo1.innerHTML = `${gift['name']} - ${gift['pts']}`
-    document.getElementById('h2-btn1').appendChild(giftIunigo1)
+    let giftIunigo2 = document.createElement('button')
+    giftIunigo2.setAttribute('class', "btn btn-link collapsed")
+    giftIunigo2.setAttribute('type', "button")
+    giftIunigo2.setAttribute('id', 'btn-rmf')
+    giftIunigo2.setAttribute('data-target',"#collapseTwo")
+    giftIunigo2.setAttribute('aria-controls', "collapseTwo")
+    giftIunigo2.setAttribute('aria-expanded', "false")
+    giftIunigo2.setAttribute('data-toggle', 'collapse')
+    giftIunigo2.innerHTML = `${gift['name']} - ${gift['pts']}`
+    document.getElementById('h2-btn1').appendChild(giftIunigo2)
 
 }
 
 function showGift2(gift){
 
-    let giftIunigo1 = document.createElement('button')
-    giftIunigo1.setAttribute('class', 'btn btn-link')
-    giftIunigo1.setAttribute('type', 'button')
-    giftIunigo1.setAttribute('id', 'btn-fcg')
-    giftIunigo1.setAttribute('data-target', "#collapseThree")
-    giftIunigo1.setAttribute('aria-controls', "collapseThree")
-    giftIunigo1.setAttribute('aria-expanded', 'false')
-    giftIunigo1.setAttribute('data-toggle', 'collapse')
-    giftIunigo1.innerHTML = `${gift['name']} - ${gift['pts']}`
-    document.getElementById('h2-btn2').appendChild(giftIunigo1)
+    let giftIunigo3 = document.createElement('button')
+    giftIunigo3.setAttribute('class', 'btn btn-link')
+    giftIunigo3.setAttribute('type', 'button')
+    giftIunigo3.setAttribute('id', 'btn-fcg')
+    giftIunigo3.setAttribute('data-target', "#collapseThree")
+    giftIunigo3.setAttribute('aria-controls', "collapseThree")
+    giftIunigo3.setAttribute('aria-expanded', 'false')
+    giftIunigo3.setAttribute('data-toggle', 'collapse')
+    giftIunigo3.innerHTML = `${gift['name']} - ${gift['pts']}`
+    document.getElementById('h2-btn2').appendChild(giftIunigo3)
 
 }
 
@@ -125,6 +128,6 @@ function showData(user){
 }
 
 showData(currentUser)
-showGift(currentGift)
+showGift(gift1)
 showGift1(gift2)
 showGift2(gift3)
