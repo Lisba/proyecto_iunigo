@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f3f3f4;
+}
+
+@font-face{
+    font-family: 'GT-Walsheim-Bold';
+    src: url(../fonts/GT-Walsheim-Bold.otf);
+}
+
+.grid-div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    font-family: 'GT-Walsheim-Bold';
+}
+
+.title .user-pts h2{
+    display: inline-block;
+}
+
+.grid-div-dos{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    font-family: 'GT-Walsheim-Bold';
+}
+
+.logo{
+    width: 90%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.title{
+    display: inline-block;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bar{
+    display: inline-block;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-image: linear-gradient(to right, #ff7e82, #ff7e82);
+}
+
+.bar .bar-line p{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.list{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 12;
+}
+
+.div-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn #btn-iunigo{
+    margin: auto;
+    color: #1826c4;
+}
+
+#btn-iunigo:hover{
+    background-color: #1826c4;
+    color: white;
+}
+
+/* --------------------Estilos de Canje------------------------- */
+
+.grid-div-canje{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    font-family: 'GT-Walsheim-Bold';
+}
+
+.grid-div-canje img{
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.title-canje{
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    justify-content: flex-start;
+}
+
+.body-div{
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
