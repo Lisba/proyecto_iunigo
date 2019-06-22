@@ -76,7 +76,7 @@ function showGift(gift){
     let giftIunigo1 = document.createElement('button')
     giftIunigo1.setAttribute('class', 'btn btn-link')
     giftIunigo1.setAttribute('type', 'button')
-    giftIunigo1.setAttribute('id', `${gift['id']}`)
+    giftIunigo1.setAttribute('id', 'btn-vtv')
     giftIunigo1.setAttribute('data-target','#collapseOne')
     giftIunigo1.setAttribute('aria-controls', 'collapseOne')
     giftIunigo1.setAttribute('aria-expanded', 'true')
@@ -100,5 +100,3 @@ function showData(user){
 
 showData(currentUser)
 showGift(currentGift)
-showGift(currentGift2)
-showGift(currentGift3)
