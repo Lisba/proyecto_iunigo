@@ -62,12 +62,8 @@ let gift3 = {
 
 let currentUser = user1
 let currentGift = gift1
-let currentGift2 = gift2
-let currentGift3 = gift3
 
 console.log(currentGift)
-console.log(currentGift2)
-console.log(currentGift3)
 console.log(currentUser)
 
 
@@ -81,8 +77,38 @@ function showGift(gift){
     giftIunigo1.setAttribute('aria-controls', 'collapseOne')
     giftIunigo1.setAttribute('aria-expanded', 'true')
     giftIunigo1.setAttribute('data-toggle', 'collapse')
-    giftIunigo1.innerHTML = `${gift['name']} ${gift['pts']}`
+    giftIunigo1.innerHTML = `${gift['name']} - ${gift['pts']}`
     document.getElementById('h2-btn').appendChild(giftIunigo1)
+
+}
+
+function showGift1(gift){
+
+    let giftIunigo1 = document.createElement('button')
+    giftIunigo1.setAttribute('class', "btn btn-link collapsed")
+    giftIunigo1.setAttribute('type', "button")
+    giftIunigo1.setAttribute('id', 'btn-rmt')
+    giftIunigo1.setAttribute('data-target',"#collapseTwo")
+    giftIunigo1.setAttribute('aria-controls', "collapseTwo")
+    giftIunigo1.setAttribute('aria-expanded', "false")
+    giftIunigo1.setAttribute('data-toggle', 'collapse')
+    giftIunigo1.innerHTML = `${gift['name']} - ${gift['pts']}`
+    document.getElementById('h2-btn1').appendChild(giftIunigo1)
+
+}
+
+function showGift2(gift){
+
+    let giftIunigo1 = document.createElement('button')
+    giftIunigo1.setAttribute('class', 'btn btn-link')
+    giftIunigo1.setAttribute('type', 'button')
+    giftIunigo1.setAttribute('id', 'btn-fcg')
+    giftIunigo1.setAttribute('data-target', "#collapseThree")
+    giftIunigo1.setAttribute('aria-controls', "collapseThree")
+    giftIunigo1.setAttribute('aria-expanded', 'false')
+    giftIunigo1.setAttribute('data-toggle', 'collapse')
+    giftIunigo1.innerHTML = `${gift['name']} - ${gift['pts']}`
+    document.getElementById('h2-btn2').appendChild(giftIunigo1)
 
 }
 
@@ -100,3 +126,5 @@ function showData(user){
 
 showData(currentUser)
 showGift(currentGift)
+showGift1(gift2)
+showGift2(gift3)
