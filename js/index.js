@@ -20,17 +20,18 @@
 
 function enableGift (){
     
-    let button = document.querySelectorAll('.btn-outline-primary')
-    console.log(button)
+    for (let i = 0; i < currentGift.length; i++){
 
-    button.forEach(element => {
-        element.forEach(() => {
-            if(currentUser['pts'] < currentGift[i]['pts']){
-                button.disabled= true
-            }
-        })
-    })
-    
+        if(currentUser['pts'] < currentGift[i]['pts']) {
+
+            let indexString = toString(i + 1)
+            let btn = document.querySelector(`btn-iunigo + ${i + 1}`)
+            btn.disabled = true
+        
+        }
+
+    }
+
 }
 
 let user1 = {
@@ -73,6 +74,7 @@ console.log(currentUser)
 function showGift(gift){
 
     let giftIunigo1 = document.createElement('button')
+    giftIunigo1.setAttribute('style', 'color: #1826c4;')
     giftIunigo1.setAttribute('class', 'btn btn-link')
     giftIunigo1.setAttribute('type', 'button')
     giftIunigo1.setAttribute('id', 'btn-vtv')
@@ -88,6 +90,7 @@ function showGift(gift){
 function showGift1(gift){
 
     let giftIunigo2 = document.createElement('button')
+    giftIunigo2.setAttribute('style', 'color: #1826c4;')
     giftIunigo2.setAttribute('class', "btn btn-link collapsed")
     giftIunigo2.setAttribute('type', "button")
     giftIunigo2.setAttribute('id', 'btn-rmf')
@@ -103,6 +106,7 @@ function showGift1(gift){
 function showGift2(gift){
 
     let giftIunigo3 = document.createElement('button')
+    giftIunigo3.setAttribute('style', 'color: #1826c4;')
     giftIunigo3.setAttribute('class', 'btn btn-link')
     giftIunigo3.setAttribute('type', 'button')
     giftIunigo3.setAttribute('id', 'btn-fcg')
