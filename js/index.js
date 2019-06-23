@@ -33,7 +33,7 @@ function enableGift () {
     }
 
 }
-
+//enableGift recorre la matriz de gifts (currentGift), luego por cada iteracion evalua si los pts del usuario son mayores o iguales a los pts requeridos por el gift a canjear ubica el boton por id (suma 1 al i y lo convierte a string para concatenarlo al id a buscar) y lo habilita.
 
 let user1 = {
     name: 'Name1',
