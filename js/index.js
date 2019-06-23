@@ -143,3 +143,12 @@ showGift(gift1)
 showGift1(gift2)
 showGift2(gift3)
 
+// let ptsCanjeados = document.createElement('h2')
+// ptsCanjeados.innerHTML = `${currentUser['pts']}`
+// document.getElementById('user-pts').appendChild(ptsCanjeados)
+
+// function restarPts () {
+
+//     let ptsRestados = currentUser['pts'] - currentGift[i]['pts']
+
+// }
