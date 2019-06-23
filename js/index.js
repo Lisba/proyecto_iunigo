@@ -18,16 +18,18 @@
         
         // let userNew = new user (name, lastName, pts)
 
-function enableGift (){
+function enableGift () {
     
     for (let i = 0; i < currentGift.length; i++){
 
-        if(currentUser['pts'] < currentGift[i]['pts']) {
+        if(currentUser['pts'] >= currentGift[i]['pts']) {
 
-            let indexString = toString(i + 1)
-            let btn = document.querySelector(`btn-iunigo + ${i + 1}`)
-            btn.disabled = true
-        
+            let indexString = i + 1
+            indexString.toString()
+
+            let btn = document.getElementById(`btn-iunigo${indexString}`)
+            btn.disabled = false
+
         }
 
     }
