@@ -1,22 +1,20 @@
-// class user{
+/*class user{
     
-    //     constructor(name, lastName, pts){
-        //         this.name = name
-        //         this.lastName = lastName
-        //         this.pts = pts
-//     }
+    constructor(name, lastName, pts){
+            this.name = name
+            this.lastName = lastName
+            this.pts = pts
+    }
 
-//     sayName(){
-    //         return `${name} ${lastName}`
-    //     }
+    sayName(){
+        return `${name} ${lastName}`
+    }
+
+    sayPts(){
+            return `${pts}`
+        }
     
-    //     sayPts(){
-        //         return `${pts}`
-        //     }
-        
-        // }
-        
-        // let userNew = new user (name, lastName, pts)
+}*/
 
 function enableGift () {
     
@@ -36,6 +34,7 @@ function enableGift () {
 
 }
 
+
 let user1 = {
     name: 'Name1',
     lastName: 'LastName1',
@@ -46,6 +45,12 @@ let user2 = {
     name: 'Name2',
     lastName: 'LastName2',
     pts: 200
+}
+
+let user3 = {
+    name: 'Name3',
+    lastName: 'LastName3',
+    pts: 160
 }
 
 let gift1 = {
@@ -72,9 +77,20 @@ let currentGift = [gift1, gift2, gift3]
 console.log(currentGift)
 console.log(currentUser)
 
+function showData(user){
+    
+    let userIunigo1 = document.createElement('h2')
+    userIunigo1.innerHTML = `${user['name']} ${user['lastName']}`
+    document.getElementById('userName').appendChild(userIunigo1)
+    
+    let userIunigo2 = document.createElement('h2')
+    userIunigo2.innerHTML = `${user['pts']} pts`
+    document.getElementById('userPts').appendChild(userIunigo2)
+    
+}
 
 function showGift(gift){
-
+    
     let giftIunigo1 = document.createElement('button')
     giftIunigo1.setAttribute('style', 'color: #1826c4;')
     giftIunigo1.setAttribute('class', 'btn btn-link')
@@ -86,11 +102,11 @@ function showGift(gift){
     giftIunigo1.setAttribute('data-toggle', 'collapse')
     giftIunigo1.innerHTML = `${gift['name']} - ${gift['pts']}`
     document.getElementById('h2-btn').appendChild(giftIunigo1)
-
+    
 }
 
 function showGift1(gift){
-
+    
     let giftIunigo2 = document.createElement('button')
     giftIunigo2.setAttribute('style', 'color: #1826c4;')
     giftIunigo2.setAttribute('class', "btn btn-link collapsed")
@@ -102,11 +118,11 @@ function showGift1(gift){
     giftIunigo2.setAttribute('data-toggle', 'collapse')
     giftIunigo2.innerHTML = `${gift['name']} - ${gift['pts']}`
     document.getElementById('h2-btn1').appendChild(giftIunigo2)
-
+    
 }
 
 function showGift2(gift){
-
+    
     let giftIunigo3 = document.createElement('button')
     giftIunigo3.setAttribute('style', 'color: #1826c4;')
     giftIunigo3.setAttribute('class', 'btn btn-link')
@@ -118,22 +134,12 @@ function showGift2(gift){
     giftIunigo3.setAttribute('data-toggle', 'collapse')
     giftIunigo3.innerHTML = `${gift['name']} - ${gift['pts']}`
     document.getElementById('h2-btn2').appendChild(giftIunigo3)
-
+    
 }
 
-function showData(user){
-
-    let userIunigo1 = document.createElement('h2')
-    userIunigo1.innerHTML = `${user['name']} ${user['lastName']}`
-    document.getElementById('userName').appendChild(userIunigo1)
-
-    let userIunigo2 = document.createElement('h2')
-    userIunigo2.innerHTML = `${user['pts']} pts`
-    document.getElementById('userPts').appendChild(userIunigo2)
-
-}
 
 showData(currentUser)
 showGift(gift1)
 showGift1(gift2)
 showGift2(gift3)
+
